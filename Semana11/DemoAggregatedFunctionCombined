@@ -1,0 +1,12 @@
+SELECT 
+    t.SalesTerritoryGroup AS TerritoryGroup,
+    COUNT(f.SalesOrderNumber) AS TotalOrders,
+    SUM(f.SalesAmount) AS TotalSales,
+    ROUND(AVG(f.SalesAmount), 2) AS AvgOrderValue,
+    MIN(f.SalesAmount) AS SmallestOrder,
+    MAX(f.SalesAmount) AS LargestOrder
+FROM FactResellerSales AS f
+INNER JOIN DimSalesTerritory AS t
+    ON f.SalesTerritoryKey = t.SalesTerritoryKey
+GROUP BY t.SalesTerritoryGroup
+ORDER BY TotalSales DESC;
