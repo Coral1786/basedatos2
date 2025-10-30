@@ -30,10 +30,10 @@ WHERE c.CustomerKey NOT IN (
         ON f.OrderDateKey = d.DateKey
     WHERE d.FullDateAlternateKey >= DATEADD(YEAR, -14, GETDATE())
 );
-
+---------------------------------------------------------------
 USE AdventureWorksDW2022;
 GO
----------------------------------------------------------------
+
 -- Consulta 3: Comparar ventas regionales en un año con las del año anterior
 DECLARE @CurrentYear INT = (
     SELECT MAX(d.CalendarYear)
