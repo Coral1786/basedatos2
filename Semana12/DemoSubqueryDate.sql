@@ -1,5 +1,6 @@
 USE AdventureWorksDW2022
-SELECT 
+---------------------------------------------------------------
+SELECT --Consulta 1: Comparación de las ventas anuales
     YEAR(d.FullDateAlternateKey) AS SalesYear,
     SUM(f.SalesAmount) AS TotalSales
 FROM FactInternetSales AS f
@@ -17,3 +18,15 @@ HAVING SUM(f.SalesAmount) > (
     ) AS YearlySales
 )
 ORDER BY SalesYear;
+---------------------------------------------------------------
+SELECT --Consulta 2: Clientes que no compran desde el 2012
+    c.CustomerKey,
+    c.FirstName + ' ' + c.LastName AS CustomerName
+FROM DimCustomer AS c
+WHERE c.CustomerKey NOT IN (
+    SELECT DISTINCT f.CustomerKey
+    FROM FactInternetSales AS f
+    INNER JOIN DimDate AS d
+        ON f.OrderDateKey = d.DateKey
+    WHERE d.FullDateAlternateKey >= DATEADD(YEAR, -14, GETDATE())
+);
