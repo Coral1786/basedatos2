@@ -1,3 +1,4 @@
+USE AdventureWorksDW2022
 SELECT 
     p.EnglishProductName,
     ps.EnglishProductSubcategoryName
