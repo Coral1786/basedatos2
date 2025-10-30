@@ -1,3 +1,4 @@
+USE AdventureWorksDW2022
 SELECT 
     c.CustomerKey,
     c.FirstName + ' ' + c.LastName AS CustomerName,
