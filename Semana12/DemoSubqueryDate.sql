@@ -1,3 +1,4 @@
+USE AdventureWorksDW2022
 SELECT 
     YEAR(d.FullDateAlternateKey) AS SalesYear,
     SUM(f.SalesAmount) AS TotalSales
