@@ -27,3 +27,16 @@ BEGIN
     RETURN ISNULL(@TotalSales, 0);
 END;
 GO
+
+-----------------------------------------------------------------------
+-- Add query to use the function
+    
+USE AdventureWorksDW2022;
+GO
+
+SELECT 
+    p.EnglishProductName,
+    dbo.fn_GetYearlySalesByProduct(p.ProductKey, 2013) AS Sales2013
+FROM DimProduct AS p
+ORDER BY Sales2013 DESC;
+
