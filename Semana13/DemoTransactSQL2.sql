@@ -31,6 +31,9 @@ RETURN
 );
 GO
 
+-----------------------------------------------------------------------
+-- Add query to use the function
+
 USE AdventureWorksDW2022;
 GO
 
