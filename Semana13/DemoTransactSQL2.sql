@@ -30,3 +30,10 @@ RETURN
     GROUP BY t.SalesTerritoryRegion, r.ResellerName
 );
 GO
+
+USE AdventureWorksDW2022;
+GO
+
+SELECT TOP 10 *
+FROM dbo.fn_GetTopResellersByYear(2013)
+ORDER BY TotalSales DESC;
