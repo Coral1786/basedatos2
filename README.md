@@ -41,3 +41,5 @@ Estas funciones no se crean, solo se utilizan directamente en consultas.
 2. Funciones definidas por el usuario (UDF — User Defined Functions)
 
 Son funciones creadas por el propio usuario o desarrollador para personalizar cálculos o consultas según las necesidades del sistema.
+
+## Semana 14
