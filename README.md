@@ -8,6 +8,10 @@ En otras palabras, toman muchos valores y devuelven uno solo. Por ejemplo: sumar
 ## Semana 12
 Aprendimos del uso de subconsultas IN y EXISTS con las funciones de Fecha, Cadena y Conversión
 
+- Las funciones de fecha permiten filtrar o calcular periodos de tiempo dinámicos.
+- Las funciones de cadena permiten formatear, unir o filtrar texto
+- Las funciones de conversión transforman tipos de datos. Por ejemplo, convertir texto a número, fecha a texto, o decimal a entero.
+
 ## Semana 13
 Aprendimos del uso de funciones Transact-SQL.
 
