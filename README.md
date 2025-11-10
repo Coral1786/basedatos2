@@ -1,6 +1,10 @@
 # basedatos2
 ## Semana 11
 
+Las funciones agregadas (aggregate functions) son operaciones que realizan cálculos sobre un conjunto de filas y devuelven un único resultado.
+
+En otras palabras, toman muchos valores y devuelven uno solo. Por ejemplo: sumar ventas (SUM()), contar clientes (COUNT()), o calcular el promedio de precios (AVG()).
+
 ## Semana 12
 Aprendimos del uso de subconsultas IN y EXISTS con las funciones de Fecha, Cadena y Conversión
 
