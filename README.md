@@ -19,27 +19,32 @@ En Transact-SQL (T-SQL) —el lenguaje de los SQL Server— una función es un b
 
 Pensemos en una función como un “mini-programa reutilizable” que ejecuta lógica SQL (como cálculos, conversiones o consultas) y devuelve un resultado sin necesidad de repetir el mismo código en cada consulta.
 
-Tipos de funciones en T-SQL
-
+### Tipos de funciones en T-SQL
 Existen dos grandes tipos:
-
 1. Funciones del sistema (ya integradas)
-
 Son las que vienen incluidas en SQL Server y están listas para usarse.
 Ejemplos:
+- De texto: UPPER(), LOWER(), LEN(), CONCAT()
+- De fecha: GETDATE(), DATEPART(), YEAR(), DATENAME()
+- De conversión: CAST(), CONVERT()
+- De agregación: SUM(), AVG(), COUNT()
 
-De texto: UPPER(), LOWER(), LEN(), CONCAT()
-
-De fecha: GETDATE(), DATEPART(), YEAR(), DATENAME()
-
-De conversión: CAST(), CONVERT()
-
-De agregación: SUM(), AVG(), COUNT()
-
-Estas funciones no se crean, solo se utilizan directamente en consultas.
+  Estas funciones no se crean, solo se utilizan directamente en consultas.
 
 2. Funciones definidas por el usuario (UDF — User Defined Functions)
-
 Son funciones creadas por el propio usuario o desarrollador para personalizar cálculos o consultas según las necesidades del sistema.
 
 ## Semana 14
+Aprendimos del manejo de transacciones
+
+El manejo de transacciones en SQL es uno de los pilares fundamentales para garantizar la integridad, consistencia y seguridad de los datos en una base de datos.
+
+Una transacción es una unidad lógica de trabajo que agrupa una o varias instrucciones SQL (como INSERT, UPDATE, DELETE) y se ejecuta como si fuera una sola operación indivisible.
+
+### ¿Cómo funciona una Transacción?
+
+Una transacción sigue un ciclo básico:
+- BEGIN TRANSACTION — Inicia la transacción.
+- (Ejecutas tus operaciones SQL) — Insertas, actualizas o eliminas datos.
+- COMMIT TRANSACTION — Confirma los cambios permanentemente.
+- ROLLBACK TRANSACTION — Revierte todos los cambios si ocurre un error.
