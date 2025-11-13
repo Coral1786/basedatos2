@@ -44,4 +44,9 @@ GO
 
 -------------------------------------------------------------------------------------------------
 
-SELECT * FROM dbo.ResellerBonusHistory ORDER BY BonusAmount DESC;
+SELECT TOP (1000) 
+    [BonusID],
+    [ResellerKey],
+    [BonusYear],
+    [BonusAmount],
+    [CreatedDate] FROM dbo.ResellerBonusHistory ORDER BY BonusAmount DESC;
