@@ -16,7 +16,9 @@ INNER JOIN DimDate AS d
     ON f.OrderDateKey = d.DateKey
 WHERE d.CalendarYear = (
     SELECT MAX(CalendarYear)
-    FROM DimDate
+    FROM FactResellerSales AS f2
+	INNER JOIN DimDate AS d2
+		ON f2.OrderDateKey  = d2.DateKey
 )
 GROUP BY r.ResellerName, t.SalesTerritoryRegion
 ORDER BY TotalSales DESC;
