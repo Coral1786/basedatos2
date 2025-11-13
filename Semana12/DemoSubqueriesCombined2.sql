@@ -19,7 +19,7 @@ WHERE DATEPART(QUARTER, d.FullDateAlternateKey) = 1
             ON sub.OrderDateKey = d2.DateKey
         WHERE d2.CalendarYear = 2013
         GROUP BY ProductKey
-        HAVING AVG(CAST(sub.OrderQuantity AS DECIMAL(10,2))) > 50
+        HAVING AVG(CAST(sub.OrderQuantity AS DECIMAL(10,2))) > 5
     )
 GROUP BY p.EnglishProductName, DATENAME(MONTH, CAST(d.FullDateAlternateKey AS DATETIME))
 ORDER BY TotalQuantity DESC;
