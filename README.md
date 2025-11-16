@@ -48,3 +48,12 @@ Una transacción sigue un ciclo básico:
 - (Ejecutas tus operaciones SQL) — Insertas, actualizas o eliminas datos.
 - COMMIT TRANSACTION — Confirma los cambios permanentemente.
 - ROLLBACK TRANSACTION — Revierte todos los cambios si ocurre un error.
+
+### Las 4 Propiedades de una Transacción: ACID
+
+
+
+- A – Atomicidad	(Todo o nada):	La transacción se ejecuta completa o no se ejecuta en absoluto.
+- C – Consistencia	(Estado válido): La BD pasa de un estado válido a otro, sin romper reglas de integridad.
+- I – Aislamiento	(Independencia): Las transacciones no interfieren entre sí (se ejecutan “aisladas”).
+- D – Durabilidad	(Persistencia):	Los cambios confirmados (COMMIT) permanecen aunque falle el sistema.
